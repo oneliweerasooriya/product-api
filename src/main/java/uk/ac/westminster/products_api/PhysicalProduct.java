@@ -1,0 +1,27 @@
+package uk.ac.westminster.products_api;
+
+
+//A PhysicalProduct IS-A Product because it gets extended by the product class inheriting it's id,name and the price.
+//name one other class a shop system might have that would NOT pass this test, and say why -> Digital Product because Product HAS a Digital Product/ Customer
+public class PhysicalProduct extends Product {
+    private double weightKg;
+    private String dimensions;
+
+    public PhysicalProduct() {
+    }
+
+    public PhysicalProduct(Long id, String name, double price, double weightKg, String dimensions) {
+        super(id, name, price);
+        this.weightKg = weightKg;
+        this.dimensions = dimensions;
+    }
+
+    public double getWeightKg() {
+        return weightKg;
+    }
+
+    public String getDimensions() {
+        return dimensions;
+    }
+}
+
